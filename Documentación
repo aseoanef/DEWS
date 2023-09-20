@@ -1,0 +1,22 @@
+
+* b09d56 - Create README.md (62 minutes ago) <aseoanef>
+	-touch README.md
+* 8e0ba20 - Añadido dir documentación.txt,libros/indice.txt (19 minutes ago) <aseoanef23@fpcoruna.afundacion.org>
+	git status
+	-touch documentación.txt
+	-mkdir libros
+	-cd libros
+	-touch indice.txt
+	-git status
+	-git add *
+	-git commit
+	-git push
+	-git status
+* dacbe48 -Añadido capítulo 3 sobre gestión de ramas (13 minutes ago) <aseoanef23@fpcoruna.afundacion.org>
+	-nano indice.txt
+	-git diff
+	-git add indice.txt
+	-git commit 
+	-git show
+	
+
