@@ -1,4 +1,4 @@
-from tkinter import Tk,ttk,messagebox
+from tkinter import Tk,ttk
 import tkinter as Tk
 from cell import Cell
 
