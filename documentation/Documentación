@@ -1,0 +1,46 @@
+
+* b09d56 - Create README.md (62 minutes ago) <aseoanef>
+	-touch README.md
+* 8e0ba20 - Añadido dir documentación.txt,libros/indice.txt (19 minutes ago) <aseoanef23@fpcoruna.afundacion.org>
+	git status
+	-touch documentación.txt
+	-mkdir libros
+	-cd libros
+	-touch indice.txt
+	-git status
+	-git add *
+	-git commit
+	-git push
+	-git status
+* dacbe48 -Añadido capítulo 3 sobre gestión de ramas (13 minutes ago) <aseoanef23@fpcoruna.afundacion.org>
+	-nano indice.txt
+	-git diff
+	-git add indice.txt
+	-git commit 
+	-git lg
+captura 1.PNG
+
+Añadida carpeta Capitulos> capitulo1.txt
+
+Añadido capitulo2.txt > captura 2.PNG
+
+Añadido capitulo3.txt y git diff de los commits > captura 3.PNG & captura 4.PNG
+
+Modificado indice.txt y git annotate de indice.txt > captura 5.PNG
+captura 6.PNG & captura 7.PNG para ver la diferencia de status
+
+Eliminada la ultima linea del indice.txt
+eliminado cappitulos/capitulo3.txt ,reset y clean > captura 8.PNG ,9 ,10
+
+borrado accidental> captura 11.PNG
+reset los cambios> captura 12.PNG,13
+
+añadido capitulo4.txt,creada nueva rama bibliografia(git branch),crear bibliografia.txt> captura 14.PNG,15, 16,17
+añadido contenido a capitulo4.txt
+
+merge de las ramas y eliminar la rama bibliografia(git merge bibliografia,git branch -d)> captura 18.PNG
+
+crear la rama bibliografia,crear biliografia.txt,cambiar bibliografia.txt de main> captura 19.PNG
+merge de ramas> captura 20.PNG
+	
+
