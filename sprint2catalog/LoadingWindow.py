@@ -4,8 +4,9 @@ import tkinter as tk
 import requests
 class LoadingWindow:
     def __init__(self,root):
+        self.finished=False
         #definicion de la ventana
-        self.json_data=[]
+        self.json=[]
         self.root=root
         self.root.title("Cargando...")
         self.root.geometry("200x200")
@@ -22,13 +23,15 @@ class LoadingWindow:
         self.progress=0
         self.draw_progress_circle(self.progress)
         self.update_progress_circle()
+        
         #empezar el thread
-        self.thread=threading.Thread(target=self.fetch_json_data)
+        self.thread=threading.Thread(target=self.get_json)
         self.thread.start()
+        self.thread_progress()
     
     def draw_progress_circle(self,progress):#dibuja el circulo
         self.canvas.delete("progress")
-        angle=int(360 *(progress / 100))
+        angle=int(360 *(progress / 100))#calcular lo que equivale del progreso a circulo
         self.canvas.create_arc(10,10,35,35,
                                start=0,extent=angle,tag="progress", outline="blue",width=4,style=tk.ARC)
     
@@ -45,13 +48,24 @@ class LoadingWindow:
         self.draw_progress_circle(self.progress)
         self.root.after(100,self.update_progress_circle)
     
-    def fetch_json_data(self):
+    def get_json(self):#conseguir los datos del JSON de github
         response=requests.get("https://raw.githubusercontent.com/aseoanef/DEWS/main/recursos/catalog.json")
         if response.status_code==200:
-            self.json_data=response.json()
+            self.json=response.json()
             self.finished=True
     
-    def launch_main_window(json_data):
+    def launch_main_window(json):
         root=tk.Tk()
-        app = MainWindow(root,json_data)
+        app = MainWindow(root,json)
+        root.mainloop()
+    def thread_progress(self):
+        if(self.finished):
+            self.root.destroy()
+            self.initialize_mainwindow(self.json)
+        else :
+            self.root.after(100,self.thread_progress)
+
+    def initialize_mainwindow(self,json):
+        root=tk.Tk()
+        app = MainWindow(root,json)
         root.mainloop()
