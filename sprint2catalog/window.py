@@ -7,6 +7,7 @@ class MainWindow():
         #abrimos otra pestaña con los datos de cada cell
         zoom_image_window = detail_window(cell.image_tk, cell.title, cell.description)
         zoom_image_window.mainloop()
+        
     def __init__(self,root):
         self.root=root
         root.title("MainWindow")
