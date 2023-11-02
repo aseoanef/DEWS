@@ -2,23 +2,23 @@
 [
     {"name": "Arctic fox",
     "description":"The Arctic fox (Vulpes lagopus), also known as the white fox, polar fox,or snow fox, is a small fox that belongs to the family of Canidae",
-    "URL":" raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/artic.jpg"},
+    "URL":" https://raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/artic.jpg"},
 
     {"name":" Fennec fox",
     "description":"The fennec fox (Vulpes zerda) is a small crepuscular fox native to the deserts of North Africa",
-    "URL":"raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/fennec.jpg"},
+    "URL":"https://raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/fennec.jpg"},
 
     {"name": "grayfox",
     "description":"Gray Fox, Null, y Garganta Profunda fueron los nombres en clave de Frank Jaeger o Frank Hunter, agente de FOX y posteriormente FOXHOUND. Fue el único miembro de FOXHOUND en obtener el nombre en código de Fox",
-    "URL":"raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/grey.jpg"},
+    "URL":"https://raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/grey.jpg"},
 
     {"name": "Marble fox",
     "description":"The Canadian Marble Fox, or Arctic Marble Fox, is a unique and beautiful subspecies of the red fox that is found only in a small area of Canada",
-    "URL":"raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/marble.jpg"},
+    "URL":"https://raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/marble.jpg"},
 
     {"name": "Red fox",
     "description":"The red fox (Vulpes vulpes) is the largest of the true foxes and one of the most widely distributed members of the order Carnivora",
-    "URL":"raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/red.jpg"}
+    "URL":"https://raw.githubusercontent.com/aseoanef/DEWS/main/sprint1Tkinter/catalog/data/edited/red.jpg"}
 ]
 
 
