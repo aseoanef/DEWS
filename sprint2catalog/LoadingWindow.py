@@ -5,8 +5,8 @@ import requests
 class LoadingWindow:
     def __init__(self,root):
         self.finished=False
-        #definicion de la ventana
         self.json=[]
+        #definicion de la ventana
         self.root=root
         self.root.title("Cargando...")
         self.root.geometry("200x200")
@@ -36,17 +36,13 @@ class LoadingWindow:
                                start=0,extent=angle,tag="progress", outline="blue",width=4,style=tk.ARC)
     
     def update_progress_circle(self):#actualiza el progreso
-        if self.progress < 50:
-            self.progress +=5
-        elif self.progress < 95:
-            self.progress += 3
-        elif self.progress < 99 :
-            self.progress += 1
+        if self.progress < 100:
+            self.progress +=3
         else:
             self.progress = 0
         
         self.draw_progress_circle(self.progress)
-        self.root.after(100,self.update_progress_circle)
+        self.root.after(5,self.update_progress_circle)
     
     def get_json(self):#conseguir los datos del JSON de github
         response=requests.get("https://raw.githubusercontent.com/aseoanef/DEWS/main/recursos/catalog.json")
@@ -58,14 +54,16 @@ class LoadingWindow:
         root=tk.Tk()
         app = MainWindow(root,json)
         root.mainloop()
+
     def thread_progress(self):
-        if(self.finished):
+        if(self.finished): 
             self.root.destroy()
             self.initialize_mainwindow(self.json)
+           
         else :
             self.root.after(100,self.thread_progress)
 
     def initialize_mainwindow(self,json):
         root=tk.Tk()
-        app = MainWindow(root,json)
+        app = MainWindow(root,self.json)
         root.mainloop()

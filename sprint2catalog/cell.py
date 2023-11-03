@@ -4,8 +4,6 @@ class Cell:
     def __init__(self,title,path,description):
         #definir los atributos de cada imagen
         self.title=title
-        self.path=path
+        self.image_tk=path
         self.description=description
-        imageBefore=Image.open(self.path)
-        #resize la imagen
-        self.image_tk=ImageTk.PhotoImage(imageBefore.resize((100,100),Image.Resampling.LANCZOS))
+    
