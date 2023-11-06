@@ -11,7 +11,7 @@ class MainWindow():
     def on_button_click(self, cell):
         #abrimos otra pestaña con los datos de cada cell
         zoom_image_window = detail_window(cell.image_tk, cell.title, cell.description)
-        zoom_image_window.mainloop()
+        #zoom_image_window.mainloop()
    
    
     def load_image(self,image_url):
@@ -24,9 +24,17 @@ class MainWindow():
     def __init__(self,root,json):
         self.root=root
         root.title("MainWindow")
+        #tamaño y posicion en pantalla
+        self.root.geometry("200x400")
+        x=(self.root.winfo_screenwidth()/2-self.root.winfo_reqwidth())
+        y=(self.root.winfo_screenheight()/2-self.root.winfo_reqheight())
+        self.root.geometry(f"+{int(x)}+{int(y)}")  
+        
+     
         #lista de imagenes
         self.cells= []
         for i in range(len(json)):
+            print(i)
             name=json[i].get("name")
             description=json[i].get("description")
             image_url=json[i].get("URL")
@@ -45,4 +53,5 @@ class MainWindow():
 if __name__ == "__main__":
     root = ttk.Tk()
     app = MainWindow(root)
+    
     root.mainloop()

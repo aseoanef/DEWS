@@ -8,8 +8,12 @@ class LoadingWindow:
         self.json=[]
         #definicion de la ventana
         self.root=root
-        self.root.title("Cargando...")
+        #centrar la ventana
         self.root.geometry("200x200")
+        x=(self.root.winfo_screenwidth()/2-self.root.winfo_reqwidth()/2)
+        y=(self.root.winfo_screenheight()/2-self.root.winfo_reqheight()/2)
+        self.root.geometry(f"+{int(x)}+{int(y)}") 
+        self.root.title("Cargando...")
         self.root.resizable(False,False)
         #añadir una label
         self.label =tk.Label(self.root, text="Cargando datos...",font=("Arial",14))
