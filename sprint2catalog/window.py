@@ -4,6 +4,7 @@ from PIL import Image,ImageTk
 from detailWindow import detail_window
 import requests
 from io import BytesIO
+from tkinter import messagebox
 
 class MainWindow():
 
@@ -19,13 +20,24 @@ class MainWindow():
         image_data = Image.open(BytesIO(response.content))
         image = ImageTk.PhotoImage(image_data)
         return image
-        
+    def about(self):
+        messagebox.showinfo("Acerca del desarrollador","Programa desarrollado en Python 3.11.5 por Anxo Seoane")
         
     def __init__(self,root,json):
         self.root=root
         root.title("MainWindow")
         #tamaño y posicion en pantalla
         self.root.geometry("200x400")
+        # Crear una barra de menús.
+        barra_menus= ttk.Menu()
+        menu_ayuda = ttk.Menu(barra_menus, tearoff=False)
+        menu_ayuda.add_command(
+        label="Acerca de",
+        command=self.about
+        )
+        barra_menus.add_cascade(menu=menu_ayuda, label="Ayuda")
+        # Insertarla en la ventana principal.
+        root.config(menu=barra_menus)
         x=(self.root.winfo_screenwidth()/2-self.root.winfo_reqwidth())
         y=(self.root.winfo_screenheight()/2-self.root.winfo_reqheight())
         self.root.geometry(f"+{int(x)}+{int(y)}")  
