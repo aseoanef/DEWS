@@ -26,6 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
         <ImageView
+            android:src="@drawable/crow"
             app:layout_constraintTop_toTopOf="@+id/titulo"
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
