@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
+import com.danielme.android.navigationdrawer.R;
+
 public class DetailActivity extends AppCompatActivity {
 
     @Override

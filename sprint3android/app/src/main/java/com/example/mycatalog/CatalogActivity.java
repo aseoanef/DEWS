@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.danielme.android.navigationdrawer.R;
+
 public class CatalogActivity extends AppCompatActivity {
     private Context context=this;
     private Button detailButton;
